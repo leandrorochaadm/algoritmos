@@ -13,6 +13,7 @@ public class Progressao {
 		valorAtual = valorInicial;
 		return valorAtual;
 	}
+	
 	 protected long proximoValor() {
 		 return ++valorInicial;
 	 }
@@ -20,8 +21,7 @@ public class Progressao {
 	 public void imprimirProgressao(int n) {
 		System.out.println(primeiroValor()); 
 		for(int i = 2; i<=n;i++) {
-			System.out.println(" "+proximoValor());
-			System.out.println(); //pula linha
+			System.out.println(proximoValor());
 		}
 	 }
 }
