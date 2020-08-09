@@ -11,18 +11,22 @@ public class Principal {
 		System.out.println("Digite o tamanho da progressão: ");
 		Progressao.tamanhoProgressao = SCANNER.nextInt();
 		
+		
+		System.out.println("Digite o valor inteiro do incremento: ");
+		int inc = SCANNER.nextInt();
+		
 		System.out.println("Progressao Aritmetica");
-		var ari = new ProgressaoAritmetica();
+		ProgressaoAritmetica ari = new ProgressaoAritmetica(inc);
 		ari.imprimirProgressao();
 		
 		
 		System.out.println("\nProgressao Geometrica");
-		var geo = new ProgressaoGeometrica();
+		ProgressaoGeometrica geo = new ProgressaoGeometrica(inc);
 		geo.imprimirProgressao();
 		
 		
 		System.out.println("\nProgressao Fibonacci");
-		var fib =  new ProgressaoFibonacci(1,2);
+		ProgressaoFibonacci fib =  new ProgressaoFibonacci(1,2);
 		fib.imprimirProgressao();
 		
 		SCANNER.close();
