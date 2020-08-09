@@ -1,7 +1,12 @@
 package com.leandrorocha;
 
-public class Progressao {
+import java.util.Arrays;
 
+public class Progressao {
+	
+//	ArrayList<Long> list = new ArrayList<Long>();
+	public static int tamanhoProgressao;
+	protected long[] list = new long[tamanhoProgressao];
 	protected long valorInicial;
 	protected long valorAtual;
 	
@@ -18,10 +23,14 @@ public class Progressao {
 		 return ++valorInicial;
 	 }
 	 
-	 public void imprimirProgressao(int n) {
-		System.out.println(primeiroValor()); 
-		for(int i = 2; i<=n;i++) {
-			System.out.println(proximoValor());
+	 public void imprimirProgressao() {
+//		System.out.println(primeiroValor()); 
+		 list[0]= primeiroValor();
+		for(int i = 2; i<=tamanhoProgressao;i++) {
+//			System.out.println(proximoValor());
+			list[i-1] = proximoValor();
 		}
+		System.out.println(Arrays.toString(list));
+
 	 }
 }

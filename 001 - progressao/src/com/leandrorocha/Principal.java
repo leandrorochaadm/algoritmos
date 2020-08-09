@@ -9,21 +9,21 @@ public class Principal {
 
 	public static void main(String[] args) {
 		System.out.println("Digite o tamanho da progressão: ");
-		final int i = SCANNER.nextInt();
+		Progressao.tamanhoProgressao = SCANNER.nextInt();
 		
 		System.out.println("Progressao Aritmetica");
 		var ari = new ProgressaoAritmetica();
-		ari.imprimirProgressao(i);
+		ari.imprimirProgressao();
 		
 		
 		System.out.println("\nProgressao Geometrica");
 		var geo = new ProgressaoGeometrica();
-		geo.imprimirProgressao(i);
+		geo.imprimirProgressao();
 		
 		
 		System.out.println("\nProgressao Fibonacci");
 		var fib =  new ProgressaoFibonacci(1,2);
-		fib.imprimirProgressao(i);
+		fib.imprimirProgressao();
 		
 		SCANNER.close();
 	}
